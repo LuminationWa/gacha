@@ -8,7 +8,7 @@ const userSchema = new Schema(
     obtainedCharacters: Array,
     savedTokens: Number,
     spentTokens: Number,
-    sinceLastToken: Number,
+    lastTokenDate: Date,
   },
   {
     timestamps: true,

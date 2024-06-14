@@ -6,7 +6,7 @@ const characterSchema = new Schema(
     picture: String,
     createdBy: mongoose.Schema.Types.ObjectId,
     tokenAmount: Number,
-    lastTokenAdded: Number, 
+    lastTokenDate: Date, 
   },
   {
     timestamps: true,
