@@ -1,5 +1,3 @@
-import connectMongoDB from "@/libs/mongodb";
-import User from "@/models/user";
 import { getSession, login, logout } from "@/auth.ts";
 import { NextResponse } from "next/server";
 

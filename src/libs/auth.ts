@@ -22,15 +22,16 @@ export async function decrypt(input: string): Promise<any> {
   return payload;
 }
 
+//THIS FUNCTION IS CREATING PROBLEMS
 export async function login(formData: { name: string; password: string }) {
   // Verify credentials && get the user
 
   await connectMongoDB();
-  const user = await User.findOne({ name: formData.name, password: formData.password });
+  const userData = await User.findOne({ name: formData.name, password: formData.password });
 
   // Create the session
   const expires = new Date(Date.now() + 10 * 1000);
-  const session = await encrypt({ user, expires });
+  const session = await encrypt({ userData, expires });
 
   // Save the session in a cookie
   cookies().set("session", session, { expires, httpOnly: true });

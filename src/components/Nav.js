@@ -1,4 +1,4 @@
-import { getSession, login, logout } from "../libs/auth.ts";
+import { getSession } from "../libs/auth.ts";
 
 const Nav = async () => {
     const session = await getSession();
