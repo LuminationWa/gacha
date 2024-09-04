@@ -4,7 +4,11 @@ const Nav = async () => {
     const session = await getSession();
     return (
         <div>
-            <pre>{JSON.stringify(session, null, 2)}</pre>
+            {session ? (
+                <pre>{JSON.stringify(session, null, 2)}</pre>
+            ) : (
+                <p>No session found</p>
+            )}
         </div>
     )
 }

@@ -1,10 +1,13 @@
+'use client'
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,6 +29,7 @@ const LoginForm = () => {
       if (response.ok) {
         alert("Login successful!");
         // Redirect to another page or handle successful login here
+        router.push("/"); // Redirect to home page
       } else {
         setError(result.message || "Login failed. Please try again.");
       }

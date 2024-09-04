@@ -1,4 +1,4 @@
-import { getSession, login, logout } from "@/auth.ts";
+import { login } from "@/libs/auth.ts";
 import { NextResponse } from "next/server";
 
 export async function POST(request) {

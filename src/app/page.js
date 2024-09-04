@@ -6,6 +6,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center p-24">
       <div>
         <a href="/signup">Register</a>
+        <a href="/api/login">Login</a>
       </div>
       <Gacha />
     </main>
